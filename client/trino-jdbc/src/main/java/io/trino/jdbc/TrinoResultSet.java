@@ -148,7 +148,7 @@ public class TrinoResultSet
     static class AsyncIterator<T>
             extends AbstractIterator<T>
     {
-        private static final int MAX_QUEUED_ROWS = 50_000;
+        private static final int MAX_QUEUED_ROWS = 25_000;
         private static final ExecutorService executorService = newCachedThreadPool(
                 new ThreadFactoryBuilder().setNameFormat("Trino JDBC worker-%s").setDaemon(true).build());
 
